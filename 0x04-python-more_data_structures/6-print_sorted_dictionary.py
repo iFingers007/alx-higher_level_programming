@@ -6,4 +6,4 @@ def print_sorted_dictionary(a_dictionary):
     keys.sort()
     # 3: Iterate over loop and print key, value pair
     for key in keys:
-        print(key +": " + str(a_dictionary[key]))
+        print(key + ": " + str(a_dictionary[key]))
