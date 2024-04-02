@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 def list_division(my_list_1, my_list_2, list_length):
+    if not my_list_1 or not my_list_2:
+        print("Input lists cannot be empty")
+        return []
     res = []
     try:
         for i in range(list_length):
