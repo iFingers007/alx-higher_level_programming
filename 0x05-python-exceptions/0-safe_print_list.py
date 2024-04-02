@@ -5,5 +5,5 @@ def safe_print_list(my_list=[], x=0):
             print("{}".format(elmts), end="")
             print()
         return elmts
-    except:
-        print("Unknown Error")
+    except Exception:
+        return elmts
