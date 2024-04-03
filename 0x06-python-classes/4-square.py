@@ -11,7 +11,7 @@ class Square:
         size: size of Square
         """
 
-        self.__size = size
+        self.size = size
 
         @property
         def size(self):
@@ -29,5 +29,5 @@ class Square:
         """ Public instance that returns
         area
         """
-        product = (self.__size) * (self.__size)
+        product = (self.size) * (self.size)
         return product
