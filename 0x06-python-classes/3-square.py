@@ -4,7 +4,7 @@
 
 class Square:
     """A class that defines Square"""
-    def __init__(self, size = 0):
+    def __init__(self, size=0):
         """__init__ method
 
         Args:
@@ -15,7 +15,6 @@ class Square:
             raise TypeError("Size must be an integer")
         if size < 0:
             raise ValueError("Size must be >= 0")
-
 
         self.__size = size
 
