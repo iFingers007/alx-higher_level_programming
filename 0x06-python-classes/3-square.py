@@ -18,3 +18,10 @@ class Square:
 
 
         self.__size = size
+
+    def area(self):
+        """ Public instance that returns
+        area
+        """
+        product = (self.__size) *(self.__size)
+        return product
