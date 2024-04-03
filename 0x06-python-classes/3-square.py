@@ -4,7 +4,7 @@
 
 class Square:
     """A class that defines Square"""
-    def __init__(self, size):
+    def __init__(self, size = 0):
         """__init__ method
 
         Args:
@@ -23,5 +23,5 @@ class Square:
         """ Public instance that returns
         area
         """
-        product = (self.__size) *(self.__size)
+        product = (self.__size) * (self.__size)
         return product
