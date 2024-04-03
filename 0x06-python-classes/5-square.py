@@ -31,6 +31,7 @@ class Square:
         """
         product = (self.size) * (self.size)
         return product
+
     def my_print(self):
         """ Public instance that
         prints #
@@ -43,4 +44,3 @@ class Square:
                 for j in range(int(result/self.size)):
                     print("#", end="")
                 print()
-        
