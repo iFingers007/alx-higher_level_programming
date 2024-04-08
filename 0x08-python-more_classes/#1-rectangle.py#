@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+""" Class Rectangle
+"""
+
+
+class Rectangle:
+    """ Defines a rectangle class """
+
+
+    def __init__(self, width=0, height=0):
+        """ Initialization of Rectangle class objects
+
+        Args:
+        width (int): Width of rectangle
+        height (int): Height of rectangle
+
+        Raises:
+        ValueError: If width is less than 0
+        TypeError: If width is not an integer
+
+        """
+        self.width = width
+        self.height = height
+
+        
