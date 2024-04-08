@@ -18,6 +18,7 @@ class Rectangle:
         """ Returns a square """
 
         return cls(size, size)
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """ Checks for the bigger rectangle
