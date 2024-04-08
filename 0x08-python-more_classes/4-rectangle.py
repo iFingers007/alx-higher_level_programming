@@ -78,6 +78,11 @@ class Rectangle:
             return ""
         return '\n'.join(["#" * self.width] * self.height)
 
+    def __repr__(self):
+        """ Returns a string that can recreate the rectangle instance """
+
+        return "Rectangle({}, {})".format(self.width, self.height)
+
     def __eval__(self):
         """ Returns a string that can recreate the rectangle instance """
 
