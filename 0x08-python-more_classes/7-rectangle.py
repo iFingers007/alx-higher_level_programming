@@ -11,6 +11,7 @@ class Rectangle:
     """ A rectangle class """
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """ Initialization of Rectangle class objects
@@ -79,7 +80,7 @@ class Rectangle:
         res = ""
         if self.width == 0 or self.height == 0:
             return ""
-        return '\n'.join(["#" * self.width] * self.height)
+        return '\n'.join([str(self.print_symbol) * self.width] * self.height)
 
     def __repr__(self):
         """ Returns a string that can recreate the rectangle instance """
