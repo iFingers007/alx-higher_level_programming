@@ -1,0 +1,136 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("Jeho", "Abu")
+My name is Jeho Abu
+>>> say_my_name("Jeho")
+My name is Jeho 
+>>> say_my_name("Deborah", "Adebayo")
+My name is Deborah Adebayo
+>>> say_my_name("Deborah")
+My name is Deborah 
+>>> say_my_name('D', 'J')
+My name is D J
+>>> say_my_name("", "Abu")
+My name is  Abu
+>>> say_my_name("Jeho", "")
+My name is Jeho 
+>>> say_my_name("", "")
+My name is  
+>>> say_my_name("")
+My name is  
+>>> say_my_name(" ")
+My name is   
+>>> say_my_name("Jeho ", "Abu")
+My name is Jeho  Abu
+>>> say_my_name("Jeho", "Abu ")
+My name is Jeho Abu 
+>>> say_my_name("Jeho ", "Abu ")
+My name is Jeho  Abu 
+>>> say_my_name(" Jeho", "Abu")
+My name is  Jeho Abu
+>>> say_my_name("Jeho", " Abu")
+My name is Jeho  Abu
+>>> say_my_name(" Jeho", " Abu")
+My name is  Jeho  Abu
+>>> say_my_name(" Jeho ", " Abu")
+My name is  Jeho   Abu
+>>> say_my_name("Jeho", " Abu ")
+My name is Jeho  Abu 
+>>> say_my_name("Jeho", " Abu ")
+My name is Jeho  Abu 
+>>> say_my_name('Jeho', 7)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+>>> say_my_name(7, 'Jeho')
+Traceback (most recent call last):
+TypeError: first_name must be a string
+>>> say_my_name(True, 'Jeho')
+Traceback (most recent call last):
+TypeError: first_name must be a string
+>>> say_my_name(False, 'Jeho')
+Traceback (most recent call last):
+TypeError: first_name must be a string
+>>> say_my_name(None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/3-say_my_name.py", line 25, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+>>> say_my_name("Jeho", None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/3-say_my_name.py", line 27, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+>>> say_my_name(None, None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/3-say_my_name.py", line 25, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+>>> say_my_name('Jeho', True)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/3-say_my_name.py", line 27, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+>>> say_my_name('Jeho', False)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/3-say_my_name.py", line 27, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+>>> say_my_name(7.10, 'Jeho')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/3-say_my_name.py", line 25, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+>>> say_my_name('Jeho', 7.10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/3-say_my_name.py", line 27, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+>>> say_my_name(['Jeho', 'Abu', 'DJ'])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/3-say_my_name.py", line 25, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+>>> say_my_name('Jeho', 'Abu', 'DJ')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+>>> say_my_name('', '', '')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+>>> say_my_name(22)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/3-say_my_name.py", line 25, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+>>> say_my_name(22.5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/3-say_my_name.py", line 25, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+>>> say_my_name(True)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/3-say_my_name.py", line 25, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+>>> say_my_name(False)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/3-say_my_name.py", line 25, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+>>> say_my_name("")
+My name is  
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'

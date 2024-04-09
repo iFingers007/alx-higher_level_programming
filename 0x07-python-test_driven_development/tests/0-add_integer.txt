@@ -1,0 +1,130 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer(1, -2)
+-1
+>>> add_integer(-1, -2)
+-3
+>>> add_integer(-11, 2)
+-9
+>>> add_integer(1.8, 2.5)
+3
+>>> add_integer(-11.8, 2.5)
+-9
+>>> add_integer(-11.8, -2.5)
+-13
+>>> add_integer(11.8, -2.5)
+9
+>>> add_integer(0, 0)
+0
+>>> add_integer(9)
+107
+>>> add_integer(-9)
+89
+>>> add_integer(3.1)
+101
+>>> add_integer(0)
+98
+>>> add_integer(4,0)
+4
+>>> add_integer(-3.1)
+95
+>>> add_integer(3.1, 8)
+11
+>>> add_integer(8, 3.1)
+11
+>>> add_integer(-3.1, 8)
+5
+>>> add_integer(8, -3.1)
+5
+>>> add_integer(-8, -3.1)
+-11
+>>> add_integer(7+2)
+107
+>>> add_integer(7-2)
+103
+>>> add_integer(7*2)
+112
+>>> add_integer(7/2)
+101
+>>> add_integer(8, 3, 5)
+Traceback (most recent call last):
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+>>> add_integer(-8, -3, -5)
+Traceback (most recent call last):
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+>>> add_integer(-7.2, -2.5, -3.2)
+Traceback (most recent call last):
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(None, None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(None, None, None)
+Traceback (most recent call last):
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
+>>> add_integer("")
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer('7')
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(" ")
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer('7', '3')
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(7, '3')
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer(-7, '3')
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer('7', -3)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer('7', 3)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(-7.10, '2.25')
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer(7.10, '2.25')
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer('7.10', 2.25)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer('7.10', -2.25)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(5, "")
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer(3.1, "five")
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer(3, [])
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer([], 10)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(3, float("nan"))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+>>> add_integer(float("nan"))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+>>> add_integer(float("-inf"))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(float("inf"))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
