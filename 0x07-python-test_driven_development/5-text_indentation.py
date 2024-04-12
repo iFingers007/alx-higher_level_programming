@@ -5,7 +5,7 @@
 
 
 def text_indentation(text):
-    """Prints a text with 2 new lines after each of these characters: ., ? and :
+    """Prints a text with 2 new lines after each of these characters: . ? and :
 
     parameters:
     text (str) = String text
@@ -31,5 +31,5 @@ def text_indentation(text):
         lines.append(curr_line.strip())
     for i, line in enumerate(lines):
         print(line, end='')
-        if i < len(lines) -1:
+        if i < len(lines) - 1:
             print()
