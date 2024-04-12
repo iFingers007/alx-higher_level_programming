@@ -1,0 +1,87 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation('')
+>>> text_indentation(' ')
+>>> text_indentation("One. Two: Three? Four.")
+One.
+<BLANKLINE>
+Two:
+<BLANKLINE>
+Three?
+<BLANKLINE>
+Four.
+>>> text_indentation("Normal test without character")
+Normal test without character
+>>> text_indentation(0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/5-text_indentation.py", line 22, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+>>> text_indentation(5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/5-text_indentation.py", line 22, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+>>> text_indentation(' ? ')
+?
+<BLANKLINE>
+>>> text_indentation(' . ')
+.
+<BLANKLINE>
+>>> text_indentation(' : ')
+:
+<BLANKLINE>
+>>> text_indentation("?special character at beginning and end?")
+?
+<BLANKLINE>
+special character at beginning and end?
+>>> text_indentation("?special character at beginning")
+?
+<BLANKLINE>
+special character at beginning
+>>> text_indentation(5.34)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/5-text_indentation.py", line 22, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+>>> text_indentation(-5.34)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/5-text_indentation.py", line 22, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+>>> text_indentation(-5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/5-text_indentation.py", line 22, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+>>> text_indentation(["Welcome?", "How far."])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/5-text_indentation.py", line 22, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+>>> text_indentation("Welcome?" * 3)
+Welcome?
+<BLANKLINE>
+Welcome?
+<BLANKLINE>
+Welcome?
+>>> text_indentation(None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/TTD/5-text_indentation.py", line 22, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+>>> text_indentation('[I am helped.]')
+[I am helped.
+<BLANKLINE>
+]

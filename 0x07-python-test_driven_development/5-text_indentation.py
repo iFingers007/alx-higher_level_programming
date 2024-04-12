@@ -21,12 +21,12 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     for char in text:
+        curr_line += char
         if char in spec_chars:
             lines.append(curr_line.strip())
             lines.append("")
             curr_line = ""
-        else:
-            curr_line += char
+
     if curr_line:
         lines.append(curr_line.strip())
     for i, line in enumerate(lines):
