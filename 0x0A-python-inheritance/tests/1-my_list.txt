@@ -1,4 +1,6 @@
 >>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
 >>> my_list.print_sorted()
 []
 >>> my_list = MyList([3])
@@ -7,18 +9,6 @@
 >>> my_list = MyList([3, 1, 2, 3])
 >>> my_list.print_sorted()
 [1, 2, 3, 3]
->>> my_list.print_sorted()
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/home/vagrant/TTD/1-my_list.py", line 14, in print_sorted
-    sorted_list = sorted(self)
-TypeError: unorderable types: str() < int()
->>> my_list.print_sorted()
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/home/vagrant/TTD/1-my_list.py", line 14, in print_sorted
-    sorted_list = sorted(self)
-TypeError: unorderable types: int() < NoneType()
 >>> my_list = MyList(["c", "a", "b", "α", "β"])
 >>> my_list.print_sorted()
 ['a', 'b', 'c', 'α', 'β']
