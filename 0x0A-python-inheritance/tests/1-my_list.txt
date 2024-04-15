@@ -1,14 +1,84 @@
 >>> MyList = __import__('1-my_list').MyList
 
 >>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
 >>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+>>> print(my_list)
 []
 >>> my_list = MyList([3])
 >>> my_list.print_sorted()
 [3]
+>>> print(my_list)
+[3]
 >>> my_list = MyList([3, 1, 2, 3])
 >>> my_list.print_sorted()
 [1, 2, 3, 3]
+>>> print(my_list)
+[3, 1, 2, 3]
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.print_sorted()
+[1, 2, 3]
+>>> my_list.append([3, -1, 2])
+>>> print(my_list)
+[3, 1, 2, [3, -1, 2]]
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list.append() takes exactly one argument (0 given)
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> if isinstance(my_list, MyList):
+...     True
+... else:
+...     False
+...
+True
+>>> my_list = MyList()                     
+>>> if issubclass(MyList, list):
+...     True
+... else:
+...     False
+... 
+True
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> if hasattr(MyList, '__str__'):
+...     True
+... else:
+...     False
+...
+True
+>>> if hasattr(MyList, 'append'):
+...     True
+... else:
+...     False
+...
+True
+>>> if hasattr(MyList, 'print_sorted'):
+...     True
+... else:
+...     False
+...
+True
 >>> my_list = MyList(["c", "a", "b", "α", "β"])
 >>> my_list.print_sorted()
 ['a', 'b', 'c', 'α', 'β']
