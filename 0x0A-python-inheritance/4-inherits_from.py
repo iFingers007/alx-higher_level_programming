@@ -1,23 +1,24 @@
 #!/usr/bin/python3
 
-""" Module for is kind class
+""" Module for inherit from
 
 
 
 """
 
 
-def is_kind_of_class(obj, a_class):
-    """Checks if its a kind
+def inherits_from(obj, a_class):
+    """Checks if an object inherits
 
     parameters:
     obj: Object to be checked
-    a_class: Class to be compared with
+    a_class: class to be compared to
 
     Returns:
     bool: True or false
+
     """
-    if isinstance(obj, a_class):
+    if issubclass(obj, a_class):
         return True
     else:
         return False
