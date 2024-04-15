@@ -15,8 +15,8 @@ def is_same_class(obj, a_class):
     obj = Object to be checked
     a_class = Class to checked
 
-    Returns:
-    bool: True if specified, False otherwise
+    Return:
+    bool: True or False
 
     """
 
