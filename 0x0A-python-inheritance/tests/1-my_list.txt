@@ -43,7 +43,7 @@
 >>> my_list.append()
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-TypeError: list.append() takes exactly one argument (0 given)
+TypeError: append() takes exactly one argument (0 given)
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
 >>> if isinstance(my_list, MyList):
