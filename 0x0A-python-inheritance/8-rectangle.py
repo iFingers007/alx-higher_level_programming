@@ -38,6 +38,8 @@ class Rectangle(BaseGeometry):
         ValueError: If less than 0
         TypeError: If not an int
         """
+        self.__width = 0
+        self.__height = 0
         self.integer_validator("width", width)
         self.__width = width
         self.integer_validator("height", height)
