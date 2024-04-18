@@ -1,7 +1,9 @@
-"""Module for the Class Base"""
+"""
+"""Module for the Rectangle Class"""
 
 
-class Base:
+
+class Rectangle:
     """Base class of the project"""
     __nb_objects = 0
 
