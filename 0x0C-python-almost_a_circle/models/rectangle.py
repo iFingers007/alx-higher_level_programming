@@ -20,7 +20,7 @@ class Rectangle(Base):
         y: cordinate
         id: Id of rectangle
 
-        Raise:
+        Raises:
         TypeError: When its not int
         ValueError: When args are less than zero
 
@@ -106,7 +106,17 @@ class Rectangle(Base):
                 f"{self.x}/{self.y} - {self.width}/{self.height}")
 
     def update(self, *args, **kwargs):
-        """assigns an argument to each attribute"""
+        """assigns an argument to each attribute
+
+        Args:
+        *args (ints): New attribute values.
+                - 1st argument represents id attribute
+                - 2nd argument represents width attribute
+                - 3rd argument represent height attribute
+                - 4th argument represents x attribute
+                - 5th argument represents y attribute
+            **kwargs (dict): New key/value pairs of attributes.
+        """
         if len(args) != 0:
             i = 0
             for i, arg in enumerate(args):

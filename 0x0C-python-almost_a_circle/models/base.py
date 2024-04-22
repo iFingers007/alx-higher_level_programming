@@ -9,14 +9,20 @@ import json
 
 
 class Base:
-    """Base class of the project"""
+    """Base class of the project
+
+    Represents the Base class
+
+    Attributes:
+    __nb_objects(int) : The number of instance of object
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
         """Initialisation of the Base class
 
         Args:
-        id: Identity
+        id (int): Identity
 
         """
         if id is not None:
@@ -27,14 +33,22 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Returns JSON representation of a dictionary"""
+        """Returns JSON representation of a dictionary
+
+        Args:
+        list_dictionaries (list): A list of dictionaries
+        """
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return '[]'
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Writes srtings representation to a file"""
+        """Writes srtings representation to a file
+
+        Args:
+        list_objs (list): list of objects
+        """
         if list_objs is None:
             list_objs = []
         fileName = cls.__name__ + ".json"
@@ -46,14 +60,28 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """returns the list of the JSON string representation"""
+        """returns the list of the JSON string representation
+
+        Args:
+        json_string (str): Json string
+
+        Returns:
+        json string or empty list
+        """
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
-        """returns an instance with all attributes already set"""
+        """returns an instance with all attributes already set
+
+        Args:
+        dictionary (dict): key/value pair of class
+
+        Returns:
+        Instance of key/value
+        """
         if cls.__name__ == "Rectangle":
             dummyInstance = cls(1, 1)
         elif cls.__name__ == "Square":
@@ -65,7 +93,11 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """Returns a list of instances"""
+        """Returns a list of instances
+
+        Returns:
+        list of instance
+        """
         fileName = cls.__name__ + ".json"
         try:
             with open(fileName, "r") as fileRead:

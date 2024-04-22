@@ -45,18 +45,27 @@ class Square(Rectangle):
         return s1 + ' ' + s2 + ' ' + s3 + ' - ' + s4
 
     def update(self, *args, **kwargs):
-        """args and kwargs"""
+        """args and kwargs
+
+        Args:
+        *args (ints): New attribute values.
+                - 1st argument represents id attribute
+                - 2nd argument represents size attribute
+                - 3rd argument represents x attribute
+                - 4th argument represents y attribute
+        **kwargs (dict): New key/value pairs of attributes.
+        """
         if len(args) != 0:
             for i, arg in enumerate(args):
                 if i == 0:
-                    self.size = arg
-                elif i == 1:
-                    self.x = arg
-                elif i == 2:
-                    self.y = arg
-                elif i == 3:
                     self.id = arg
-                i += 1
+                elif i == 1:
+                    self.size = arg
+                elif i == 2:
+                    self.x = arg
+                elif i == 3:
+                    self.y = arg
+#                i += 1
 
         else:
             if "id" in kwargs:
