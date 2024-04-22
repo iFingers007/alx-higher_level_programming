@@ -17,7 +17,7 @@ class Rectangle(Base):
         width: Rectangle width
         height: Rectangle height
         x: x cordintate
-        y: cordinate
+        y: y cordinate
         id: Id of rectangle
 
         Raises:
@@ -31,7 +31,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-        super().__init__(id)
+        Base.__init__(self, id)
 
     @property
     def width(self):
