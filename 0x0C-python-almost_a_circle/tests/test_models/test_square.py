@@ -39,7 +39,7 @@ class TestSquare_instantiation(unittest.TestCase):
         self.assertEqual(s1.id, s2.id - 1)
 
     def test_four_args(self):
-        self.assertEqual(Square(1, 2, 3, 7)).id, 7)
+        self.assertEqual(Square(1, 2, 3, 7).id, 7)
 
     def test_five_args(self):
         self.assertEqual(7, Square(10, 2, 0, 0, 7).id)
@@ -61,7 +61,7 @@ class TestSquare_instantiation(unittest.TestCase):
         r.size = 10
         self.assertEqual(10, r.size)
 
-def test_size_getter(self):
+    def test_size_getter(self):
         r = Square(5, 7, 7, 1)
         self.assertEqual(5, r.size)
 

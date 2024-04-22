@@ -1,5 +1,6 @@
-#!/usr/bin/python3
-"""Unit test for models/rectangle.py"""
+#!usr/bin/python3
+"""Unittest for models/rectangle.py"""
+
 
 import io
 import sys
