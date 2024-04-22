@@ -11,7 +11,20 @@ class Rectangle(Base):
     """Rectangle subclass of the project"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initialisation function for the class"""
+        """Initialisation function for the class
+
+        Args:
+        width: Rectangle width
+        height: Rectangle height
+        x: x cordintate
+        y: cordinate
+        id: Id of rectangle
+
+        Raise:
+        TypeError: When its not int
+        ValueError: When args are less than zero
+
+        """
 
         self.width = width
         self.height = height

@@ -13,7 +13,12 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialisation of the Base class"""
+        """Initialisation of the Base class
+
+        Args:
+        id: Identity
+
+        """
         if id is not None:
             self.id = id
         else:

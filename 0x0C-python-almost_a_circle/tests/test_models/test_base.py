@@ -107,6 +107,7 @@ class test_instantiation(unittest.TestCase):
         base_obj = Base()
         self.assertIs(type(base_obj), Base)
 
+
 class TestBase_to_json_string(unittest.TestCase):
     """Checking the to_json method"""
 

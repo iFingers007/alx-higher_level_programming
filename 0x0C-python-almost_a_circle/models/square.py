@@ -10,7 +10,19 @@ class Square(Rectangle):
     """The square subclass of Rectangle"""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Initialisation function of the subclass"""
+        """Initialisation function of the subclass
+
+        Args:
+        size: width or height of Square
+        x: x cordintate
+        y: cordinate
+        id: Id of rectangle
+
+        Raise:
+        TypeError: When its not int
+        ValueError: When args are less than zero
+
+        """
         super().__init__(size, size, x, y, id)
 
     @property
