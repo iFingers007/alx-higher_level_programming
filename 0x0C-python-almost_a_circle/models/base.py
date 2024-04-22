@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""Module for the Class Base"""
+"""Module for the Class Base
+
+
+"""
+
+
 import json
 
 

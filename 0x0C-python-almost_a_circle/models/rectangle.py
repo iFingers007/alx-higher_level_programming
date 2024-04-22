@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Module for the subClass Rectangle"""
+"""Module for the subClass Rectangle
+
+
+"""
+
 from models.base import Base
 
 

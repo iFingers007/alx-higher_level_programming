@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Square subclass"""
+"""Module containing Square subclass
+
+
+"""
 from models.rectangle import Rectangle
 
 
@@ -34,13 +37,13 @@ class Square(Rectangle):
         if len(args) != 0:
             for i, arg in enumerate(args):
                 if i == 0:
-                    self.id = arg
-                elif i == 1:
                     self.size = arg
-                elif i == 2:
+                elif i == 1:
                     self.x = arg
-                elif i == 3:
+                elif i == 2:
                     self.y = arg
+                elif i == 3:
+                    self.id = arg
                 i += 1
 
         else:
