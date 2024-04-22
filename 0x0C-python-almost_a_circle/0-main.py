@@ -19,7 +19,8 @@ if __name__ == "__main__":
     b5 = Base()
     print(b5.id)
 
-    b6 = Base(10)
-    print(dir(b6))
+    b6 = Base("hello")
+    print(b6.id)
 
-    
+    b7 = Base({'a': 1, 'b': 2})
+    print(b7.id)
