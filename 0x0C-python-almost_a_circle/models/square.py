@@ -10,10 +10,6 @@ class Square(Rectangle):
         """Initialisation function of the subclass"""
         super().__init__(size, size, x, y, id)
 
-    def __str__(self):
-        """String rep of Square subclass"""
-        return (f"[Square] ({self.id}) {self.__x}/{self.__y} - {self.__size}")
-
     @property
     def size(self):
         """Gets the size of the square"""
@@ -25,31 +21,43 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def __str__(self):
+        """String rep of Square subclass"""
+        s1 = "[Square]"
+        s2 = f"({self.id})"
+        s3 = f"{self.x}/{self.y}"
+        s4 = f"{self.size}"
+        return s1 + ' ' + s2 + ' ' + s3 + ' - ' + s4
+
     def update(self, *args, **kwargs):
-        """ For updating using unknown args"""
-        if args:
-            n_args = len(args)
-            if n_args >= 1:
-                self.id = args[0] #  attr = ["id", "size", "x", "y"]
-            if n_args >= 2:
-                self.__size = args[1]
-            if n_args >= 3:
-                self.__size = args[2]
-            if n_args >= 4:
-                self.__x = args[3]
-            if n_args >= 5:
-                self.__y = args[4]
+        """args and kwargs"""
+        if len(args) != 0:
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                elif i == 1:
+                    self.size = arg
+                elif i == 2:
+                    self.x = arg
+                elif i == 3:
+                    self.y = arg
+                i += 1
+
         else:
-            for key, value in kwargs.items():
-                if k == 'id':
-                    self.id = v
-                if k == 'size':
-                    self.__size = v
-                if k == 'x':
-                    self.__x = v
-                if k == 'y':
-                    self.__y = v
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.size = kwargs["size"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
 
     def to_dictionary(self):
         """Dictionary representation of square subclass"""
-        return {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
+        return ({
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y
+        })

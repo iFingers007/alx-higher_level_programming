@@ -8,11 +8,13 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialisation function for the class"""
-        super().__init__(id)
+
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+
+        super().__init__(id)
 
     @property
     def width(self):
@@ -88,24 +90,39 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
-        if args:
-            attr = ["id", "width", "height", "x", "y"]
+        if len(args) != 0:
+            i = 0
             for i, arg in enumerate(args):
-                if i <= 4:
-                    setattr(self, attr[i], arg)
-                else:
-                    pass
+                if i == 0:
+                    self.id = arg
+                elif i == 1:
+                    self.width = arg
+                elif i == 2:
+                    self.height = arg
+                elif i == 3:
+                    self.x = arg
+                elif i == 4:
+                    self.y = arg
+                i += 1
+
         else:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
 
     def to_dictionary(self):
         """Converts an object to a dictionary"""
-        recDict = {
+        return ({
             "id": self.id,
             "width": self.width,
             "height": self.height,
             "x": self.x,
             "y": self.y
-        }
-        return recDict
+        })
