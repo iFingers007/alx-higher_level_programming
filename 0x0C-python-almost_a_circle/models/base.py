@@ -126,10 +126,9 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         """Deserialises a csv file"""
-        csvRows = []
+
         fileName = f"{cls.__name__}.csv"
         with open(fileName) as readCsv:
-            fileRead = csv.reader(readCsv)
-            for row in fileRead:
-                csvRows.append(row)
-        return csvRows
+            fR = csv.reader(readCsv)
+            for row in fR:
+                return row
