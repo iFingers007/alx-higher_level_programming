@@ -6,7 +6,7 @@
 
 
 import json
-
+import csv
 
 class Base:
     """Base class of the project
@@ -110,3 +110,27 @@ class Base:
             instList.append(cls.create(**diction))
 
         return instList
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Saves to a csv file"""
+        if list_objs is None:
+            list_objs = []
+        fileName = f"{cls.__name__}.csv"
+        dictList = []
+#s        for obj in list_objs:
+#            dictList.append(obj.to_dictionary())
+        with open(fileName, "w", newline='') as fileCsv:
+            outputWriter = csv.writer(fileCsv)
+            outputWriter.writerow(list_objs)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserialises a csv file"""
+        csvRows = []
+        fileName = f"{cls.__name__}.csv"
+        with open(fileName) as readCsv:
+            fileRead = csv.reader(readCsv)
+            for row in fileRead:
+                csvRows.append(row)
+        return csvRows
