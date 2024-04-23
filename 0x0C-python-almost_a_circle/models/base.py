@@ -8,6 +8,7 @@
 import json
 import csv
 
+
 class Base:
     """Base class of the project
 
@@ -118,8 +119,6 @@ class Base:
             list_objs = []
         fileName = f"{cls.__name__}.csv"
         dictList = []
-#s        for obj in list_objs:
-#            dictList.append(obj.to_dictionary())
         with open(fileName, "w", newline='') as fileCsv:
             outputWriter = csv.writer(fileCsv)
             outputWriter.writerow(list_objs)
