@@ -131,4 +131,4 @@ class Base:
         with open(fileName) as readCsv:
             fR = csv.reader(readCsv)
             for row in fR:
-                return row
+                return list(row)
