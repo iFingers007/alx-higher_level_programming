@@ -409,6 +409,10 @@ class TestSquare_stdout(unittest.TestCase):
         r.y = 10
         self.assertEqual("[Square] ([4]) 8/10 - 15", str(r))
 
+    def test_one_arg(self):
+        r = Square(1)
+        self.assertEqual("[Square] (52) 0/0 - 1", str(r))
+
     def test_str_method_one_arg(self):
         r = Square(1, 3, 4, 5)
         with self.assertRaises(TypeError):
