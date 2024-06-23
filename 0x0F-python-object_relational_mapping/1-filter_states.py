@@ -4,7 +4,8 @@
 import MySQLdb
 import sys
 
-if __name__ == "__main__":
+
+def main():
     db_username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
@@ -28,3 +29,7 @@ if __name__ == "__main__":
 
     cursor.close()
     db.close()
+
+
+if __name__ == "__main__":
+    main()
