@@ -22,7 +22,8 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT * FROM states WHERE BINARY name='{}'".format(n))
+    query = "SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC"
+    cursor.execute(query, (n,))
 
     rows = cursor.fetchall()
 
