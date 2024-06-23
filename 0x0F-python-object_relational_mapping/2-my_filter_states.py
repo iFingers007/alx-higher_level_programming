@@ -6,6 +6,7 @@ import sys
 
 
 if __name__ == "__main__":
+
     db_username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
