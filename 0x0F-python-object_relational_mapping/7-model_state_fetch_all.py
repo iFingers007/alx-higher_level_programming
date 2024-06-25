@@ -9,7 +9,6 @@ from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
 
-
 if __name__ == "__main__":
     usr, pw, db = sys.argv[1:4]
     host = 'localhost'
