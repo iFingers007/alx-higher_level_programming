@@ -11,11 +11,12 @@ from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == "__main__":
-    username, passwrd, database = sys.argv[1:4]
+    usr, pw, db = sys.argv[1:4]
     host = 'localhost'
     port = 3306
+    par = f'mysql+mysqldb://{usr}:{pw}@localhost/{db}'
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(username, passwrd, database), pool_pre_ping=True)
+    engine = create_engine(par, pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
