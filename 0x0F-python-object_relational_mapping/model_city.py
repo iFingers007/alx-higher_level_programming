@@ -8,7 +8,6 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 
-
 class City(Base):
     """State class for the Database"""
     __tablename__ = 'cities'
