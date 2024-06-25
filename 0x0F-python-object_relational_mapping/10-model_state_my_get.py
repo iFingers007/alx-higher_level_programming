@@ -10,10 +10,6 @@ from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == "__main__":
-
-    if len(sys.argv) != 5:
-        sys.exit(1)
-
     usr, pw, db, sn = sys.argv[1:5]
     par = f'mysql+mysqldb://{usr}:{pw}@localhost:3306/{db}'
 
@@ -28,4 +24,4 @@ if __name__ == "__main__":
     if match:
         print(f"{match.id}")
     else:
-        print("Not Found")
+        print("Not found")
