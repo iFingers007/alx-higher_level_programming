@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """Python Network 1 Module"""
 
-import urllib.request
-import urllib.parse
+import urllib
 import sys
 
 if __name__ == "__main__":
