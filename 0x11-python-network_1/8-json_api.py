@@ -5,15 +5,15 @@ import sys
 
 if __name__ == "__main__":
     url = 'http://0.0.0.0:5000/search_user'
-    q =sys.argv[1] if len(sys.argv) > 1 else ""
+    q = sys.argv[1] if len(sys.argv) > 1 else ""
 
     payload = {'q': q}
 
     try:
-        resp=requests.post(url, data=payload)
+        resp = requests.post(url, data=payload)
         resp.raise_for_status()
         try:
-            json_resp=resp.json()
+            json_resp = resp.json()
             if json_resp:
                 print(f"[{json_resp.get('id')}] {json_resp.get('name')}")
             else:
