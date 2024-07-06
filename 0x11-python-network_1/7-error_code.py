@@ -7,7 +7,7 @@ if __name__ == "__main__":
     url = sys.argv[1]
     resp = requests.get(url)
 
-    if resp:        
+    if resp:
         print(resp.text)
     else:
         print(f"Error code: {resp.status_code}")
