@@ -9,7 +9,7 @@ if (!filePath) {
   process.exit(1);
 }
 
-request(filePath, function(error, response, body) {
+request(filePath, function (error, response, body) {
   if (error) {
     console.error('error:', error);
   }
