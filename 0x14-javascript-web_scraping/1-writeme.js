@@ -15,7 +15,5 @@ fs.writeFile(filePath, contentToWrite, 'utf8', (err) => {
   if (err) {
     // Handle errors that occur during file reading
     console.error(err);
-    return;
   }
-  console.log('Writing to file completed');
 });
