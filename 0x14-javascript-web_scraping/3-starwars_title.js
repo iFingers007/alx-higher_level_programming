@@ -10,7 +10,7 @@ if (!movieId) {
   process.exit(1);
 }
 
-request(movieApi, function (error, response, body) {
+request(movieApi, (error, response, body) => {
   if (!error && response.statusCode === 200) {
     const movie = JSON.parse(body);
     console.log(movie.title);
