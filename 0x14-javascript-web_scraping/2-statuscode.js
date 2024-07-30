@@ -10,6 +10,8 @@ if (!filePath) {
 }
 
 request(filePath, function(error, response, body) {
-  console.error('error:', error);
+  if (error) {
+    console.error('error:', error);
+  }
   console.log('code:', response && response.statusCode);
 });
