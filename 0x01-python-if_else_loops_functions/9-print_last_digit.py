@@ -1,11 +1,5 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 def print_last_digit(number):
-
-    if number >= 0:
-        ld = number % 10
-        print(f"{ld:d}", end='')
-        return ld
-    else:
-        ld = abs(number) % 10
-        print(f"{ld:d}", end='')
-        return ld
+    last_digit =  abs(number) % 10
+    print(f"{last_digit}", end="")
+    return last_digit
